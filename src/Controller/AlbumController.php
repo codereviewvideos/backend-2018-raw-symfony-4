@@ -100,6 +100,95 @@ class AlbumController extends AbstractController
         );
     }
 
+    /**
+     * @Route("/album/{id}", name="put_album", methods={"PUT"}, requirements={"id": "\d+"})
+     */
+    public function put(Request $request, $id)
+    {
+        $data = json_decode(
+            $request->getContent(),
+            true
+        );
+
+        $existingAlbum = $this->findAlbumById($id);
+
+        $form = $this->createForm(AlbumType::class, $existingAlbum);
+
+        $form->submit($data);
+
+        if (false === $form->isValid()) {
+            return new JsonResponse(
+                [
+                    'status' => 'error',
+                    'errors' => $this->formErrorSerializer->convertFormToArray($form),
+                ],
+                JsonResponse::HTTP_BAD_REQUEST
+            );
+        }
+
+        $this->entityManager->flush();
+
+        return new JsonResponse(
+            null,
+            JsonResponse::HTTP_NO_CONTENT
+        );
+    }
+
+
+    /**
+     * @Route("/album/{id}", name="patch_album", methods={"PATCH"}, requirements={"id": "\d+"})
+     */
+    public function patch(Request $request, $id)
+    {
+        $data = json_decode(
+            $request->getContent(),
+            true
+        );
+
+        $existingAlbum = $this->findAlbumById($id);
+
+        $form = $this->createForm(AlbumType::class, $existingAlbum);
+
+        $form->submit($data, false);
+
+        if (false === $form->isValid()) {
+            return new JsonResponse(
+                [
+                    'status' => 'error',
+                    'errors' => $this->formErrorSerializer->convertFormToArray($form),
+                ],
+                JsonResponse::HTTP_BAD_REQUEST
+            );
+        }
+
+        $this->entityManager->flush();
+
+        return new JsonResponse(
+            null,
+            JsonResponse::HTTP_NO_CONTENT
+        );
+    }
+
+
+    /**
+     * @Route("/album/{id}", name="delete_album", methods={"DELETE"}, requirements={"id": "\d+"})
+     * @param $id
+     * @return JsonResponse
+     */
+    public function delete($id)
+    {
+        $existingAlbum = $this->findAlbumById($id);
+
+        $this->entityManager->remove($existingAlbum);
+        $this->entityManager->flush();
+
+        return new JsonResponse(
+            null,
+            JsonResponse::HTTP_NO_CONTENT
+        );
+    }
+
+
     private function findAlbumById($id)
     {
         $album = $this->albumRepository->find($id);
