@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dcd1e83a-c06e-418e-8343-b9158923d525" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Entity/Album.php" afterPath="$PROJECT_DIR$/src/Entity/Album.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Serializer/FormErrorSerializer.php" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AlbumController.php" afterPath="$PROJECT_DIR$/src/Controller/AlbumController.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -46,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AlbumController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AlbumController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controller/AlbumController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="45" column="31" lean-forward="false" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
+            <state relative-caret-position="381">
+              <caret line="53" column="86" lean-forward="false" selection-start-line="53" selection-start-column="86" selection-end-line="53" selection-end-column="86" />
               <folding>
                 <element signature="e#34#55#0#PHP" expanded="true" />
               </folding>
@@ -58,13 +60,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Album.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Album.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entity/Album.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="398">
               <caret line="32" column="28" lean-forward="false" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
               <folding>
                 <element signature="e#30#62#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FormErrorSerializer.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Serializer/FormErrorSerializer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="430">
+              <caret line="33" column="38" lean-forward="false" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
+              <folding>
+                <element signature="e#7#348#0#PHP" expanded="true" />
+                <element signature="e#420#457#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -102,8 +117,9 @@
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/src/Controller/HealthcheckController.php" />
         <option value="$PROJECT_DIR$/src/Form/AlbumType.php" />
-        <option value="$PROJECT_DIR$/src/Controller/AlbumController.php" />
         <option value="$PROJECT_DIR$/src/Entity/Album.php" />
+        <option value="$PROJECT_DIR$/src/Serializer/FormErrorSerializer.php" />
+        <option value="$PROJECT_DIR$/src/Controller/AlbumController.php" />
       </list>
     </option>
   </component>
@@ -308,12 +324,12 @@
       <updated>1521458851528</updated>
       <workItem from="1521458853415" duration="1887000" />
       <workItem from="1521467134600" duration="3016000" />
-      <workItem from="1521538974027" duration="1509000" />
+      <workItem from="1521538974027" duration="2642000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6412000" />
+    <option name="totallyTimeSpent" value="7545000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="720" extended-state="0" />
@@ -440,22 +456,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/AlbumController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="45" column="31" lean-forward="false" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
-          <folding>
-            <element signature="e#34#55#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Album.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="398">
           <caret line="32" column="28" lean-forward="false" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
           <folding>
             <element signature="e#30#62#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Serializer/FormErrorSerializer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="33" column="38" lean-forward="false" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
+          <folding>
+            <element signature="e#7#348#0#PHP" expanded="true" />
+            <element signature="e#420#457#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/AlbumController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="53" column="86" lean-forward="false" selection-start-line="53" selection-start-column="86" selection-end-line="53" selection-end-column="86" />
+          <folding>
+            <element signature="e#34#55#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
