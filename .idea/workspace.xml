@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="dcd1e83a-c06e-418e-8343-b9158923d525" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/src/Controller/AlbumController.php" afterPath="$PROJECT_DIR$/src/Controller/AlbumController.php" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Album.php" afterPath="$PROJECT_DIR$/src/Entity/Album.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -50,8 +49,8 @@
       <file leaf-file-name="AlbumController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controller/AlbumController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="48" column="36" lean-forward="false" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
+            <state relative-caret-position="377">
+              <caret line="60" column="46" lean-forward="false" selection-start-line="60" selection-start-column="46" selection-end-line="60" selection-end-column="46" />
               <folding>
                 <element signature="e#34#55#0#PHP" expanded="true" />
               </folding>
@@ -324,12 +323,12 @@
       <updated>1521458851528</updated>
       <workItem from="1521458853415" duration="1887000" />
       <workItem from="1521467134600" duration="3016000" />
-      <workItem from="1521538974027" duration="3835000" />
+      <workItem from="1521538974027" duration="4064000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8738000" />
+    <option name="totallyTimeSpent" value="8967000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="720" extended-state="0" />
@@ -479,8 +478,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/AlbumController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="48" column="36" lean-forward="false" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
+        <state relative-caret-position="377">
+          <caret line="60" column="46" lean-forward="false" selection-start-line="60" selection-start-column="46" selection-end-line="60" selection-end-column="46" />
           <folding>
             <element signature="e#34#55#0#PHP" expanded="true" />
           </folding>
