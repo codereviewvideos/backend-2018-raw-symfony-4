@@ -4,10 +4,12 @@ namespace App\Controller;
 
 use App\Entity\Album;
 use App\Form\AlbumType;
+use App\Repository\AlbumRepository;
 use App\Serializer\FormErrorSerializer;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
@@ -21,14 +23,32 @@ class AlbumController extends AbstractController
      * @var FormErrorSerializer
      */
     private $formErrorSerializer;
+    /**
+     * @var AlbumRepository
+     */
+    private $albumRepository;
 
     public function __construct(
         EntityManagerInterface $entityManager,
-        FormErrorSerializer $formErrorSerializer
+        FormErrorSerializer $formErrorSerializer,
+        AlbumRepository $albumRepository
     )
     {
         $this->entityManager = $entityManager;
         $this->formErrorSerializer = $formErrorSerializer;
+        $this->albumRepository = $albumRepository;
+    }
+
+    /**
+     * @Route("/album/{id}", name="get_album", methods={"GET"}, requirements={"id"="\d+"})
+     * @return JsonResponse
+     */
+    public function get($id)
+    {
+        return new JsonResponse(
+            $this->findAlbumById($id),
+            JsonResponse::HTTP_OK
+        );
     }
 
     /**
@@ -66,5 +86,16 @@ class AlbumController extends AbstractController
             ],
             JsonResponse::HTTP_CREATED
         );
+    }
+
+    private function findAlbumById($id)
+    {
+        $album = $this->albumRepository->find($id);
+
+        if (null === $album) {
+            throw new NotFoundHttpException();
+        }
+
+        return $album;
     }
 }

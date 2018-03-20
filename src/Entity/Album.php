@@ -8,7 +8,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * @ORM\Entity(repositoryClass="App\Repository\AlbumRepository")
  */
-class Album
+class Album implements \JsonSerializable
 {
     /**
      * @ORM\Id()
@@ -73,5 +73,15 @@ class Album
         $this->trackCount = $trackCount;
 
         return $this;
+    }
+
+    public function jsonSerialize(): array
+    {
+        return [
+            'id'           => $this->id,
+            'title'        => $this->title,
+            'release_date' => $this->releaseDate->format(\DateTime::ATOM),
+            'track_count'  => $this->trackCount,
+        ];
     }
 }
