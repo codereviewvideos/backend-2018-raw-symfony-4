@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\AlbumRepository")
@@ -18,6 +19,7 @@ class Album
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank()
      */
     private $title;
 
@@ -28,6 +30,7 @@ class Album
 
     /**
      * @ORM\Column(type="integer")
+     * @Assert\GreaterThan(0)
      */
     private $trackCount;
 
