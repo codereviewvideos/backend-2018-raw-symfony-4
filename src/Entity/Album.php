@@ -30,7 +30,7 @@ class Album
 
     /**
      * @ORM\Column(type="integer")
-     * @Assert\GreaterThan(0g)
+     * @Assert\GreaterThan(0)
      */
     private $trackCount;
 
